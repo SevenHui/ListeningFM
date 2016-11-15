@@ -1,0 +1,56 @@
+//
+//  XQ_PrefixHeader.pch
+//  ListeningFM
+//
+//  Created by apple on 16/9/20.
+//  Copyright © 2016年 Ma Baihui. All rights reserved.
+//
+
+#ifndef XQ_PrefixHeader_pch
+#define XQ_PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Masonry.h"
+// 网络图片
+#import "UIImageView+WebCache.h"
+// 刷新加载
+#import "MJRefresh.h"
+// 网络数据请求
+#import "XQNetTool.h"
+// 数据库
+#import "XQ_SQLiteTool.h"
+// 归档反归档
+#import "XQArchiverTool.h"
+// 专辑详情
+#import "XQ_AlbumDetailViewController.h"
+// 播放
+#import "XQ_AudioPlayVC.h"
+
+
+// 角度转弧度
+#define AngleToRadian(x) (x / 180.0 * M_PI)
+// 1.对于约束参数可以省去"mas_"
+#define MAS_SHORTHAND
+// 2.对于默认的约束参数自动装箱
+#define MAS_SHORTHAND_GLOBALS
+
+#define lfweight WIDTHSCREEN / 414
+#define lfheight HEIGHTSCREEN / 736
+
+#define WIDTHVIEW self.view.frame.size.width
+#define HEIGHTVIEW self.view.frame.size.height
+#define WIDTH  self.bounds.size.width
+#define HEIGHT  self.bounds.size.height
+#define BOUNDSCREEN  [UIScreen mainScreen].bounds
+#define WIDTHSCREEN  BOUNDSCREEN.size.width
+#define HEIGHTSCREEN  BOUNDSCREEN.size.height
+
+#define COLOR [UIColor colorWithRed:(arc4random() % 256 / 255.0) green:(arc4random() % 256 / 255.0) blue:(arc4random() % 256 / 255.0) alpha:1.0]
+
+#define NIGHTCOLOR [UIColor colorWithRed:0.26 green:0.26 blue:0.27 alpha:1.00]
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* XQ_PrefixHeader_pch */
